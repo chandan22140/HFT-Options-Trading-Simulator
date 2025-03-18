@@ -47,3 +47,49 @@ This project is a high-frequency trading (HFT) simulator for options trading str
 
 ```bash
 g++ -std=c++11 -O2 -o hft_simulator main.cpp
+```
+
+#### Using CMake
+
+1. Create a `CMakeLists.txt` file (an example is provided in the repository).
+2. Run the following commands:
+
+   ```bash
+   mkdir build && cd build
+   cmake ..
+   make
+   ```
+
+### Running the Simulator
+
+After building the project, run the executable:
+
+```bash
+./hft_simulator
+```
+
+The simulation will execute a pre-defined number of ticks (simulating an HFT environment), and at the end, it will display the cumulative profit/loss for each strategy.
+
+## Configuration
+
+You can modify simulation parameters such as:
+- Total simulation ticks (e.g., 10,000 ticks)
+- Initial underlying price, drift, and volatility for the GBM model
+- Indicator window sizes and thresholds for alpha signal generation
+- Holding period for trades
+- Trading volume (number of contracts)
+
+These parameters are defined in the source code, allowing you to experiment with different market conditions and trading behaviors.
+
+## Contributing
+
+Contributions, improvements, and suggestions are welcome. Please open an issue or submit a pull request if you have ideas to enhance the simulator.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+This simulator is intended for educational and research purposes only. It is not designed for real trading, and trading options involves significant risk.
+
